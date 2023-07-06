@@ -1,1 +1,19 @@
-<p>listado works!</p>
+<h2>Listado clientes</h2>
+
+<ng-container *ngIf="clienteArray.length != 0">
+    <table class="table">
+        <tr>
+            <th>Nombre</th>
+            <th>CIF</th>
+            <th>Dirección</th>
+            <th>Grupo</th>
+        </tr>
+        <tr *ngFor="let cliente of clienteArray" class="datos">
+            <td>{{cliente.nombre}}</td>
+            <td>{{cliente.cif}}</td>
+            <td>{{cliente.direccion}}</td>
+            <td>{{cliente.grupo}}</td>
+            
+        </tr> 
+    </table>
+</ng-container>
