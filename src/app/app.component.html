@@ -1,12 +1,4 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
 
 <router-outlet></router-outlet>
 
@@ -14,24 +6,32 @@
   <div class="row my-2">
     <h2>Alta cliente</h2>
   </div>
+  <!-- ------------------------ -->
+  <!-- Introducimos el nombre -->
   <div class="row my-2">
     <div class="form-label">Nombre</div>
   </div>
   <div class="row">
     <input class="form-control" type="text" id="nombre" [(ngModel)]="nombre">
   </div>
+  <!-- ------------------------ -->
+  <!-- Introducimos el CIF -->
   <div class="row my-2">
     <div class="form-label">CIF</div>
   </div>
   <div class="row">
     <input class="form-control" type="text" id="cif" [(ngModel)]="cif">
   </div>
+  <!-- ------------------------ -->
+  <!-- Introducimos la dirección -->
   <div class="row my-2">
     <div class="form-label">Dirección</div>
   </div>
   <div class="row">
     <input class="form-control" type="text" id="direccion" [(ngModel)]="direccion">
   </div>
+  <!-- ------------------------ -->
+  <!-- Introducimos el grupo -->
   <div class="row my-3">
     <div class="form-label col-1">Grupo</div>
     <select class="form-select col-1" id="grupo" [(ngModel)]="grupo">
@@ -41,12 +41,16 @@
       <option value="3">3</option>
     </select>
   </div>
+  <!-- ------------------------ -->
+  <!-- Estos serían los botones con sus metodos correspondientes -->
   <div class="row">
     <div class="col-2 btn btn-primary mx-3" (click)="anadirDatos()">Añadir Cliente</div>
     <div class="col-2 btn btn-primary" (click)="eliminarDatos()">Eliminar Cliente</div>
   </div>
 </div>
 <hr>
+<!-- ------------------------ -->
+<!-- Pasamos al componente hijo listado el array con los datos -->
 <div class="container my-3">
   <app-listado [clienteArray]="clienteArray"></app-listado>
 </div>

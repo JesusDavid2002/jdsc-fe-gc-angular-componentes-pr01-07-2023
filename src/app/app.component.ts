@@ -13,6 +13,7 @@ export class AppComponent{
 
   clienteArray: any[] = [];
 
+  // Creamos un metodo para añadir datos al array y otro para eliminar el ultimo elemento del mismo
   anadirDatos(): void{
     if (this.grupo == 0){
       this.grupo = 'Sin definir';

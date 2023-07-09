@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ListadoComponent {
 
+  // Recogemos el array del componente padre
   @Input() clienteArray: any[] = [];
   
 }

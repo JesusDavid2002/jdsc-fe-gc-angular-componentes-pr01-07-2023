@@ -8,6 +8,7 @@
             <th>Dirección</th>
             <th>Grupo</th>
         </tr>
+        <!-- Utilizamos el ngFor para acceder a cada posicion del array -->
         <tr *ngFor="let cliente of clienteArray" class="datos">
             <td>{{cliente.nombre}}</td>
             <td>{{cliente.cif}}</td>
